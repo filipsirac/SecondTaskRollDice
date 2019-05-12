@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".activity.DieActivity">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstDice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/secondDice"
+            android:layout_marginTop="@dimen/margin_top_first_column"
+            android:src="@drawable/one"
+    />
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/secondDice"
+            app:layout_constraintStart_toEndOf="@+id/firstDice"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/thirdDice"
+            android:layout_marginTop="@dimen/margin_top_first_column"
+            android:layout_marginStart="@dimen/margin_start"
+            android:src="@drawable/five"
+    />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thirdDice"
+            app:layout_constraintStart_toEndOf="@+id/secondDice"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/margin_top_first_column"
+            android:layout_marginStart="@dimen/margin_start"
+            android:src="@drawable/three"
+    />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fourthDice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstDice"
+            app:layout_constraintEnd_toStartOf="@id/fifthDice"
+            android:layout_marginTop="@dimen/margin_top_second_row"
+            android:src="@drawable/five"
+    />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fifthDice"
+            app:layout_constraintStart_toEndOf="@id/fourthDice"
+            app:layout_constraintTop_toBottomOf="@id/firstDice"
+            app:layout_constraintEnd_toStartOf="@id/sixthDice"
+            android:layout_marginTop="@dimen/margin_top_second_row"
+            android:layout_marginStart="@dimen/margin_start"
+            android:src="@drawable/four"
+    />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sixthDice"
+            app:layout_constraintStart_toEndOf="@id/fifthDice"
+            app:layout_constraintTop_toBottomOf="@id/firstDice"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/margin_top_second_row"
+            android:layout_marginStart="@dimen/margin_start"
+            android:src="@drawable/six"
+    />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rollDice"
+            android:textSize="@dimen/roll_dice_text_size"
+            android:text="@string/roll_dice"
+            android:background="@color/colorPrimary"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@id/fifthDice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/refresh"
+            android:textSize="@dimen/roll_dice_text_size"
+            android:text="@string/refresh"
+            android:background="@color/colorPrimaryDark"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@id/rollDice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+
+</android.support.constraint.ConstraintLayout>
